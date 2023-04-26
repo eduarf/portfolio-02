@@ -4,3 +4,17 @@ html {
     --color-secondary: rgb(22, 22, 22);
     --color-quinary: white;
   }
+
+  $font-weights: (
+    'font-weight-thin': 200,
+    'font-weight-light': 300,
+    'font-weight-regular': 400,
+    'font-weight-medium': 500,
+    'font-weight-bold': 600,
+    'font-weight-extra-bold': 700,
+    'font-weight-black': 800,
+  ); 
+  
+  @function font-weight($font-weight-style) {
+    @return map-get($font-weights, $font-weight-style);
+  }
