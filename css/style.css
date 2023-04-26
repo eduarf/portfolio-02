@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+html {
+  --color-primary: hsl(212, 100%, 50%);
+  --color-primary-m: hsl(212, 100%, 40%);
+  --color-secondary: rgb(22, 22, 22);
+  --color-quinary: white; }
+
+:root {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.9;
+  background-color: var(--color-primary); }
+
+.container {
+  display: grid;
+  grid-template-columns: [container-start] 1fr [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] 1fr [container-end];
+  grid-template-rows: 100vh repeat(8, min-content); }
+
+.header {
+  grid-column: container-start / container-end;
+  background-color: var(--color-primary-m); }
+
+.about {
+  background-color: var(--color-quinary);
+  height: 600px;
+  grid-column: center-start / center-end; }
+
+.services {
+  height: 600px;
+  grid-column: center-start / center-end;
+  background-color: orange; }
+
+.customers {
+  height: 600px;
+  background-color: crimson;
+  grid-column: container-start / container-end; }
+
+.portfolio {
+  height: 600px;
+  background-color: royalblue;
+  grid-column: center-start / center-end; }
+
+.testimonials {
+  height: 600px;
+  background-color: antiquewhite;
+  grid-column: container-start / container-end; }
+
+.blog {
+  height: 600px;
+  background-color: cadetblue;
+  grid-column: center-start / center-end; }
+
+.contact {
+  height: 600px;
+  background-color: tomato;
+  grid-column: container-start / container-end; }
+
+.footer {
+  height: 600px;
+  background-color: thistle;
+  grid-column: container-start / container-end; }
