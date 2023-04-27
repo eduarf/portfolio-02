@@ -18,8 +18,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  line-height: 1.9;
-  background-color: var(--color-primary); }
+  line-height: 1.9; }
 
 .container {
   display: grid;
@@ -32,14 +31,27 @@ li {
 a:link,
 a:visited {
   text-decoration: none;
-  color: var(--color-secondary);
+  color: var(--color-quinary);
   font-weight: 300;
   letter-spacing: .2rem;
   font-size: calc(1.2rem + 0.5vw); }
 
 .header {
   grid-column: container-start / container-end;
-  background-color: var(--color-primary-m); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/headerbg.jpeg"); }
+  .header__nav {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 4rem; }
+    .header__nav--list {
+      display: flex;
+      gap: 2rem; }
+  .header__heading {
+    color: var(--color-quinary);
+    -webkit-font-smoothing: antialiased; }
 
 .about {
   background-color: var(--color-quinary);
@@ -80,3 +92,8 @@ a:visited {
   height: 600px;
   background-color: thistle;
   grid-column: container-start / container-end; }
+
+.header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
