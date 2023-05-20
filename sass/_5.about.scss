@@ -1,5 +1,49 @@
 .about {
-    background-color: var(--color-quinary);
-    height: 600px;
     grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
+    background-color: rgb(255, 255, 255);
+    margin: 6rem 0;
+    @extend %sec-padding;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    &__skills {
+        &--top {
+            display: flex;
+            gap: 10rem;
+            &__image{
+                height: 25rem;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+            &__content{
+                &--div{
+                    display: flex;
+                    h4 {
+                        font-size: 1.6rem;
+                        color: var(--color-gray);
+                    }
+                    span {}
+                }
+            }
+        }
+        &--bottom {
+            &__skill {
+                span {
+
+                }
+                div {
+
+                }
+            }
+        }
+    }
+    &__content {
+        &--heading {
+
+        }
+        &--para {
+
+        }
+    }
 }

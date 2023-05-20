@@ -11,7 +11,8 @@ html {
   --color-primary: hsl(212, 100%, 50%);
   --color-primary-m: hsl(212, 100%, 40%);
   --color-secondary: rgb(22, 22, 22);
-  --color-quinary: white; }
+  --color-quinary: white;
+  --color-black: rgb(30, 30, 30); }
 
 :root {
   font-size: 62.5%; }
@@ -23,7 +24,8 @@ body {
 .container {
   display: grid;
   grid-template-columns: [container-start] 1fr [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] 1fr [container-end];
-  grid-template-rows: 100vh repeat(8, min-content); }
+  grid-template-rows: 100vh repeat(8, min-content);
+  background-color: whitesmoke; }
 
 li {
   list-style: none; }
@@ -120,9 +122,25 @@ a:visited {
     opacity: 1; } }
 
 .about {
-  background-color: var(--color-quinary);
-  height: 600px;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
+  background-color: white;
+  margin: 6rem 0;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; }
+  .about__skills--top {
+    display: flex;
+    gap: 10rem; }
+    .about__skills--top__image {
+      height: 25rem;
+      object-fit: cover;
+      border-radius: 5px; }
+    .about__skills--top__content--div {
+      display: flex; }
+      .about__skills--top__content--div h4 {
+        font-size: 1.6rem;
+        color: var(--color-gray); }
 
 .services {
   height: 600px;
@@ -163,3 +181,6 @@ a:visited {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+
+.about {
+  padding: 6vh 4vw; }

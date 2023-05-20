@@ -14,6 +14,7 @@ body {
     )
     [center-end] 1fr [container-end];
   grid-template-rows: 100vh repeat(8, min-content);
+  background-color: rgb(245,245,245);
 }
 li {
   list-style: none;
