@@ -1,3 +1,7 @@
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-quinary); }
+
 *,
 *::before,
 *::after {
@@ -24,7 +28,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: [container-start] 1fr [center-start] repeat(13, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] 1fr [container-end];
+  grid-template-columns: [container-start] 1fr [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] 1fr [container-end];
   grid-template-rows: 100vh repeat(8, min-content);
   background-color: whitesmoke; }
 
@@ -183,6 +187,33 @@ a:visited {
           width: 50%; }
         .about__skills--bottom__skill div .progress-4 {
           width: 90%; }
+  .about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 2rem; }
+    .about__content--heading {
+      font-size: calc(1.3rem + 1.5vw);
+      font-weight: 500;
+      position: relative; }
+      .about__content--heading::before {
+        content: '';
+        position: absolute;
+        height: .5rem;
+        width: 20%;
+        background-color: var(--color-primary);
+        bottom: 0; }
+    .about__content--para {
+      font-size: calc(1rem + 0.5vw);
+      font-weight: 200;
+      color: var(--color-black);
+      text-align: justify; }
+  @media screen and (max-width: 1000px) {
+    .about {
+      grid-column: 4 / 12; }
+      .about__content {
+        padding: 0;
+        margin-top: 1rem; } }
 
 .services {
   height: 600px;

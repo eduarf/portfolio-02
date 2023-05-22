@@ -1,3 +1,39 @@
+@mixin media-desktop {
+    @media screen and (min-width: break-point(break-point-desktop)) {
+        @content;
+    }
+}
+
+@mixin media-large {
+    @media screen and (max-width: break-point(break-point-large)) {
+        @content;
+    }
+}
+
+@mixin media-tablet {
+    @media screen and (max-width: break-point(break-point-tablet)) {
+        @content;
+    }
+}
+
+@mixin media-medium {
+    @media screen and (max-width: break-point(break-point-medium)) {
+        @content;
+    }
+}
+
+@mixin media-small {
+    @media screen and (max-width: break-point(break-point-small)) {
+        @content;
+    }
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-quinary);
+}
+
+
 @import "1.reset.scss";
 @import "2.variables.scss";
 @import "3.utilities.scss";
