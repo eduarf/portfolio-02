@@ -8,8 +8,8 @@
   -moz-box-sizing: border-box; }
 
 html {
-  --color-primary: hsl(212, 100%, 50%);
-  --color-primary-m: hsl(212, 100%, 40%);
+  --color-primary: rgb(0,120,255);
+  --color-primary-m: rgb(205,225,248);
   --color-secondary: rgb(22, 22, 22);
   --color-quinary: white;
   --color-black: rgb(30, 30, 30); }
@@ -35,7 +35,7 @@ a:visited {
   text-decoration: none;
   font-weight: 300;
   letter-spacing: .1rem;
-  font-size: calc(1.2rem + 0.5vw); }
+  font-size: calc(1rem + 0.5vw); }
 
 .header {
   grid-column: container-start / container-end;
@@ -48,7 +48,7 @@ a:visited {
     align-items: flex-end;
     padding: 0 4rem; }
     .header__nav--logo {
-      font-size: calc(1.5rem + 1vw);
+      font-size: calc(1rem + .5vw);
       color: var(--color-quinary);
       font-weight: 500;
       letter-spacing: 0.2rem; }
@@ -131,16 +131,38 @@ a:visited {
   box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; }
   .about__skills--top {
     display: flex;
-    gap: 10rem; }
+    gap: 6rem; }
     .about__skills--top__image {
-      height: 25rem;
+      width: 18rem;
+      height: 18rem;
       object-fit: cover;
       border-radius: 5px; }
-    .about__skills--top__content--div {
-      display: flex; }
-      .about__skills--top__content--div h4 {
-        font-size: 1.6rem;
-        color: var(--color-gray); }
+    .about__skills--top__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .about__skills--top__content--div {
+        display: flex;
+        align-items: center;
+        gap: .5rem; }
+        .about__skills--top__content--div h4 {
+          font-size: 1.6rem;
+          color: black;
+          font-weight: 400; }
+        .about__skills--top__content--div span {
+          font-size: 1.4rem;
+          color: gray; }
+  .about__skills--bottom {
+    background-color: yellow; }
+    .about__skills--bottom__skill span {
+      font-size: calc(1rem + .5vw); }
+    .about__skills--bottom__skill div {
+      height: 1.3rem;
+      background-color: var(--color-primary-m); }
+      .about__skills--bottom__skill div span {
+        display: block;
+        height: 100%;
+        background-color: var(--color-primary); }
 
 .services {
   height: 600px;

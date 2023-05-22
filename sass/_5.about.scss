@@ -10,30 +10,47 @@
     &__skills {
         &--top {
             display: flex;
-            gap: 10rem;
+            gap: 6rem;
             &__image{
-                height: 25rem;
+                width: 18rem;
+                height: 18rem;
                 object-fit: cover;
                 border-radius: 5px;
             }
             &__content{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 &--div{
                     display: flex;
+                    align-items: center;
+                    gap: .5rem;
                     h4 {
                         font-size: 1.6rem;
-                        color: var(--color-gray);
+                        color: black;
+                        font-weight: 400;
                     }
-                    span {}
+                    span {
+                        font-size: 1.4rem;
+                        color: gray;
+                    }
                 }
             }
         }
         &--bottom {
+            background-color:yellow;
             &__skill {
                 span {
-
+                    font-size: font-size(font-size-regular);
                 }
                 div {
-
+                    height: 1.3rem;
+                    background-color: var(--color-primary-m);
+                    span {
+                        display: block;
+                        height: 100%;
+                        background-color: var(--color-primary);
+                    }
                 }
             }
         }

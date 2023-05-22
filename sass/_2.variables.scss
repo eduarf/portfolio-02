@@ -1,6 +1,6 @@
 html {
-    --color-primary: hsl(212, 100%, 50%);
-    --color-primary-m: hsl(212, 100%, 40%);
+    --color-primary: rgb(0,120,255);
+    --color-primary-m: rgb(205,225,248);
     --color-secondary: rgb(22, 22, 22);
     --color-quinary: white;
     --color-black: rgb(30, 30, 30);
@@ -21,9 +21,9 @@ html {
   }
 
   $font-sizes: (
-    'font-size-small': calc(1.2rem + 0.5vw),
-    'font-size-regular': calc(1.5rem + 1vw),
-    'font-size-medium': calc(1.5rem + 2vw),
+    'font-size-small': calc(1rem + 0.5vw),
+    'font-size-regular': calc(1rem + .5vw),
+    'font-size-medium': calc(1.3rem + 1.5vw),
     'font-size-large': calc(1.5rem + 5vw),
     'font-size-xlarge': calc(2.5rem + 5vw),
   );
