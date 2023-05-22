@@ -12,7 +12,8 @@ html {
   --color-primary-m: rgb(205,225,248);
   --color-secondary: rgb(22, 22, 22);
   --color-quinary: white;
-  --color-black: rgb(30, 30, 30); }
+  --color-black: rgb(30, 30, 30);
+  --color-gray: rgb(39,34,45); }
 
 :root {
   font-size: 62.5%; }
@@ -23,7 +24,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: [container-start] 1fr [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] 1fr [container-end];
+  grid-template-columns: [container-start] 1fr [center-start] repeat(13, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] 1fr [container-end];
   grid-template-rows: 100vh repeat(8, min-content);
   background-color: whitesmoke; }
 
@@ -129,40 +130,59 @@ a:visited {
   margin: 6rem 0;
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; }
-  .about__skills--top {
+  .about__skills {
     display: flex;
-    gap: 6rem; }
-    .about__skills--top__image {
-      width: 18rem;
-      height: 18rem;
-      object-fit: cover;
-      border-radius: 5px; }
-    .about__skills--top__content {
+    flex-direction: column;
+    gap: 2rem; }
+    .about__skills--top {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between; }
-      .about__skills--top__content--div {
+      gap: 6rem;
+      margin-top: 2rem; }
+      .about__skills--top__image {
+        width: 18rem;
+        height: 18rem;
+        object-fit: cover;
+        border-radius: 5px; }
+      .about__skills--top__content {
         display: flex;
-        align-items: center;
-        gap: .5rem; }
-        .about__skills--top__content--div h4 {
-          font-size: 1.6rem;
-          color: black;
-          font-weight: 400; }
-        .about__skills--top__content--div span {
-          font-size: 1.4rem;
-          color: gray; }
-  .about__skills--bottom {
-    background-color: yellow; }
-    .about__skills--bottom__skill span {
-      font-size: calc(1rem + .5vw); }
-    .about__skills--bottom__skill div {
-      height: 1.3rem;
-      background-color: var(--color-primary-m); }
-      .about__skills--bottom__skill div span {
-        display: block;
-        height: 100%;
-        background-color: var(--color-primary); }
+        flex-direction: column;
+        justify-content: space-between; }
+        .about__skills--top__content--div {
+          display: flex;
+          align-items: center;
+          gap: .5rem; }
+          .about__skills--top__content--div h4 {
+            font-size: 1.6rem;
+            color: black;
+            font-weight: 400; }
+          .about__skills--top__content--div span {
+            font-size: 1.4rem;
+            color: gray; }
+    .about__skills--bottom__heading {
+      font-size: calc(1rem + .5vw);
+      font-weight: 600;
+      color: var(--color-black);
+      letter-spacing: 0.5px; }
+    .about__skills--bottom__skill {
+      margin: 1.5rem 0; }
+      .about__skills--bottom__skill span {
+        font-size: calc(1rem + .5vw);
+        font-weight: 300; }
+      .about__skills--bottom__skill div {
+        height: 1.3rem;
+        background-color: var(--color-primary-m); }
+        .about__skills--bottom__skill div span {
+          display: block;
+          height: 100%;
+          background-color: var(--color-primary); }
+        .about__skills--bottom__skill div .progress-1 {
+          width: 85%; }
+        .about__skills--bottom__skill div .progress-2 {
+          width: 75%; }
+        .about__skills--bottom__skill div .progress-3 {
+          width: 50%; }
+        .about__skills--bottom__skill div .progress-4 {
+          width: 90%; }
 
 .services {
   height: 600px;
