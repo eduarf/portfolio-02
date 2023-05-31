@@ -113,6 +113,8 @@
         }
     }
     @include media-medium {
+        margin: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         &__content {
             &--para {
                 font-size: 1.6rem;
