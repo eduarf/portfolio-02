@@ -332,11 +332,14 @@ a:visited {
         .services__content--card__svg-container:hover {
           background-color: var(--color-primary);
           border-color: var(--color-primary-m); }
+      .services__content--card__svg-container:hover > .services__content--card__svg {
+        background-color: white; }
       .services__content--card__svg {
         height: 6rem;
         width: 6rem;
         mask-size: cover;
-        -webkit-mask-size: cover; }
+        -webkit-mask-size: cover;
+        background-color: var(--color-black); }
       .services__content--card__heading {
         font-size: calc(1rem + 1vw);
         text-transform: uppercase;
@@ -347,8 +350,25 @@ a:visited {
         font-weight: 300; }
   .services__svg-bag {
     mask-image: url(../images/bag.svg);
-    -webkit-mask-image: url(../images/bag.svg);
-    background-color: yellow; }
+    -webkit-mask-image: url(../images/bag.svg); }
+  .services__svg-binoculars {
+    mask-image: url(../images/binoculars.svg);
+    -webkit-mask-image: url(../images/binoculars.svg); }
+  .services__svg-graph {
+    mask-image: url(../images/graph.svg);
+    -webkit-mask-image: url(../images/graph.svg); }
+  .services__svg-list {
+    mask-image: url(../images/list.svg);
+    -webkit-mask-image: url(../images/list.svg); }
+  .services__svg-schedule {
+    mask-image: url(../images/schedule.svg);
+    -webkit-mask-image: url(../images/schedule.svg); }
+  .services__svg-sun {
+    mask-image: url(../images/sun.svg);
+    -webkit-mask-image: url(../images/sun.svg); }
+
+.services__content--card__svg:hover + .services__content--card__svg {
+  background-color: white !important; }
 
 .customers {
   height: 600px;
