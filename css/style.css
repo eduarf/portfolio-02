@@ -54,7 +54,7 @@ a:visited {
     padding: 0 4rem;
     transition: all 0.4s ease-in-out; }
     .header__nav--logo {
-      font-size: calc(1rem + 1.5vw);
+      font-size: calc(1rem + 1vw);
       color: var(--color-quinary);
       font-weight: 500;
       letter-spacing: 0.2rem;
@@ -123,7 +123,7 @@ a:visited {
         align-items: center; }
         .header__nav--list__item--link {
           color: black;
-          font-size: calc(1rem + 1.5vw) !important; }
+          font-size: calc(1rem + 1vw) !important; }
           .header__nav--list__item--link::before {
             background-color: var(--color-black); } }
 
@@ -261,7 +261,7 @@ a:visited {
     gap: 1.5rem;
     padding: 0 2rem; }
     .about__content--heading {
-      font-size: calc(1rem + 1.5vw);
+      font-size: calc(1rem + 1vw);
       font-weight: 500;
       position: relative; }
       .about__content--heading::before {
@@ -295,9 +295,60 @@ a:visited {
           margin-top: 1rem; } }
 
 .services {
-  height: 600px;
-  grid-column: center-start / center-end;
-  background-color: orange; }
+  grid-column: center-start / center-end; }
+  .services__top {
+    text-align: center;
+    margin-bottom: 5rem; }
+    .services__top--heading {
+      font-size: calc(1.5rem + 3vw);
+      text-transform: uppercase;
+      font-weight: 500; }
+    .services__top--para {
+      font-size: calc(1rem + .5vw);
+      font-weight: 300; }
+  .services__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 5rem;
+    margin-bottom: 2rem; }
+    .services__content--card {
+      background-color: var(--color-quinary);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem 1rem;
+      border-radius: 1.2rem;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px; }
+      .services__content--card__svg-container {
+        height: 12rem;
+        width: 12rem;
+        border: 8px solid var(--color-primary);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        transition: all .4s ease; }
+        .services__content--card__svg-container:hover {
+          background-color: var(--color-primary);
+          border-color: var(--color-primary-m); }
+      .services__content--card__svg {
+        height: 6rem;
+        width: 6rem;
+        mask-size: cover;
+        -webkit-mask-size: cover; }
+      .services__content--card__heading {
+        font-size: calc(1rem + 1vw);
+        text-transform: uppercase;
+        font-weight: 500; }
+      .services__content--card__para {
+        font-size: calc(1rem + 0.5vw);
+        text-align: center;
+        font-weight: 300; }
+  .services__svg-bag {
+    mask-image: url(../images/bag.svg);
+    -webkit-mask-image: url(../images/bag.svg);
+    background-color: yellow; }
 
 .customers {
   height: 600px;

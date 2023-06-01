@@ -1,5 +1,67 @@
 .services {
-    height: 600px;
     grid-column: center-start / center-end;
-    background-color: orange;
+    &__top {
+        text-align: center;
+        margin-bottom: 5rem;
+        &--heading{
+            font-size: font-size(font-size-large);
+            text-transform: uppercase;
+            font-weight: font-weight(font-weight-medium);
+        }
+        &--para{
+            font-size: font-size(font-size-regular);
+            font-weight: font-weight(font-weight-light);
+        }
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        gap: 5rem;
+        margin-bottom: 2rem;
+        &--card{
+            background-color: var(--color-quinary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem 1rem;
+            border-radius: 1.2rem;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+            &__svg-container {
+                height: 12rem;
+                width: 12rem;
+                border: 8px solid var(--color-primary);
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                transition: all .4s ease;
+                &:hover {
+                    background-color: var(--color-primary);
+                    border-color: var(--color-primary-m);
+                }
+            }
+            &__svg{
+                height: 6rem;
+                width: 6rem;
+                mask-size: cover;
+                -webkit-mask-size: cover;
+            }
+            &__heading {
+                font-size: font-size(font-size-medium);
+                text-transform: uppercase;
+                font-weight: font-weight(font-weight-medium);
+            }
+            &__para {
+                font-size: font-size(font-size-small);
+                text-align: center;
+                font-weight: font-weight(font-weight-light);
+            }
+        }
+    }
+    &__svg-bag {
+        mask-image: url(../images/bag.svg);
+        -webkit-mask-image: url(../images/bag.svg);
+        background-color: yellow;
+    }
 }
