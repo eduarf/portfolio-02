@@ -42,7 +42,7 @@
                 }
             }
             &__svg-container:hover > &__svg{
-                background-color: white;
+                background-color: var(--color-quinary);
             }
             &__svg{
                 height: 6rem;
@@ -87,8 +87,24 @@
         mask-image: url(../images/sun.svg);
         -webkit-mask-image: url(../images/sun.svg);
     }
-}
-
-.services__content--card__svg:hover + .services__content--card__svg {
-    background-color: white !important;
+    @include media-large {
+        padding: 0 2rem;
+    }
+    @include media-tablet {
+        padding: 0 1.5rem;
+        &__content {
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        }
+    }
+    @include media-medium {
+        padding: 0 1rem;
+        &__content {
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        }
+    }
+    @include media-small {
+        &__content {
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        }
+    }
 }

@@ -333,7 +333,7 @@ a:visited {
           background-color: var(--color-primary);
           border-color: var(--color-primary-m); }
       .services__content--card__svg-container:hover > .services__content--card__svg {
-        background-color: white; }
+        background-color: var(--color-quinary); }
       .services__content--card__svg {
         height: 6rem;
         width: 6rem;
@@ -366,9 +366,22 @@ a:visited {
   .services__svg-sun {
     mask-image: url(../images/sun.svg);
     -webkit-mask-image: url(../images/sun.svg); }
-
-.services__content--card__svg:hover + .services__content--card__svg {
-  background-color: white !important; }
+  @media screen and (max-width: 1000px) {
+    .services {
+      padding: 0 2rem; } }
+  @media screen and (max-width: 800px) {
+    .services {
+      padding: 0 1.5rem; }
+      .services__content {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); } }
+  @media screen and (max-width: 600px) {
+    .services {
+      padding: 0 1rem; }
+      .services__content {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } }
+  @media screen and (max-width: 400px) {
+    .services__content {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); } }
 
 .customers {
   height: 600px;
