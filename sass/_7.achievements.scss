@@ -1,18 +1,21 @@
 .achievements {
-    height: 50rem;
+    min-height: 50rem;
     grid-column: container-start / container-end;
     background-image: linear-gradient(rgba(14, 127, 255, 0.8), rgba(14, 127, 255, 0.8)), url('../images/office.jpeg');
     background-attachment: fixed;
     @extend %bg;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @extend %sec-padding;
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     &__card{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2rem;
         padding: 3rem;
+        
         h2 {
             font-size: font-size(font-size-medium);
             font-weight: font-weight(font-weight-medium);
@@ -23,6 +26,7 @@
             font-weight: font-weight(font-weight-medium);
             color: var(--color-quinary);
             text-transform: uppercase;
+            text-align: center;
         }
     }
     &__svg-container {

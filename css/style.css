@@ -384,13 +384,14 @@ a:visited {
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); } }
 
 .achievements {
-  height: 50rem;
+  min-height: 50rem;
   grid-column: container-start / container-end;
   background-image: linear-gradient(rgba(14, 127, 255, 0.8), rgba(14, 127, 255, 0.8)), url("../images/office.jpeg");
   background-attachment: fixed;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center; }
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); }
   .achievements__card {
     display: flex;
     flex-direction: column;
@@ -405,7 +406,8 @@ a:visited {
       font-size: calc(1rem + .5vw);
       font-weight: 500;
       color: var(--color-quinary);
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-align: center; }
   .achievements__svg-container {
     height: 10rem;
     width: 10rem;
@@ -463,5 +465,5 @@ a:visited {
   background-repeat: no-repeat;
   background-position: center; }
 
-.about {
+.about, .achievements {
   padding: 6vh 4vw; }
