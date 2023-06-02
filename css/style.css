@@ -383,10 +383,13 @@ a:visited {
     .services__content {
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); } }
 
-.customers {
+.achievements {
   height: 600px;
   grid-column: container-start / container-end;
-  background-image: linear-gradient(rgba(14, 127, 255, 0.8), rgba(14, 127, 255, 0.8)), url("../images/office.jpeg"); }
+  background-image: linear-gradient(rgba(14, 127, 255, 0.8), rgba(14, 127, 255, 0.8)), url("../images/office.jpeg");
+  background-attachment: fixed; }
+  .achievements__svg {
+    height: 10rem; }
 
 .portfolio {
   height: 600px;
@@ -413,7 +416,7 @@ a:visited {
   background-color: thistle;
   grid-column: container-start / container-end; }
 
-.header, .customers {
+.header, .achievements {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }

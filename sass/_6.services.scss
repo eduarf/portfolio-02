@@ -63,30 +63,13 @@
             }
         }
     }
-    &__svg-bag {
-        mask-image: url(../images/bag.svg);
-        -webkit-mask-image: url(../images/bag.svg);
-    }
-    &__svg-binoculars{
-        mask-image: url(../images/binoculars.svg);
-        -webkit-mask-image: url(../images/binoculars.svg);
-    }
-    &__svg-graph{
-        mask-image: url(../images/graph.svg);
-        -webkit-mask-image: url(../images/graph.svg);
-    }
-    &__svg-list{
-        mask-image: url(../images/list.svg);
-        -webkit-mask-image: url(../images/list.svg);
-    }
-    &__svg-schedule{
-        mask-image: url(../images/schedule.svg);
-        -webkit-mask-image: url(../images/schedule.svg);
-    }
-    &__svg-sun{
-        mask-image: url(../images/sun.svg);
-        -webkit-mask-image: url(../images/sun.svg);
-    }
+        @include svg-mask(bag);
+        @include svg-mask(binoculars);
+        @include svg-mask(graph);
+        @include svg-mask(list);
+        @include svg-mask(schedule);
+        @include svg-mask(sun);
+        
     @include media-large {
         padding: 0 2rem;
     }
@@ -108,3 +91,5 @@
         }
     }
 }
+
+  

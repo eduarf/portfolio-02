@@ -33,6 +33,13 @@
     color: var(--color-quinary);
 }
 
+@mixin svg-mask($svg-class) {
+    &__svg-#{$svg-class} {
+      mask-image: url(../images/#{$svg-class}.svg);
+      -webkit-mask-image: url(../images/#{$svg-class}.svg);
+    }
+  }
+
 
 @import "1.reset.scss";
 @import "2.variables.scss";
