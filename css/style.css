@@ -434,6 +434,9 @@ a:visited {
   .achievements__svg-trophy {
     mask-image: url(../images/trophy.svg);
     -webkit-mask-image: url(../images/trophy.svg); }
+  @media screen and (max-width: 800px) {
+    .achievements {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } }
 
 .portfolio {
   height: 600px;
