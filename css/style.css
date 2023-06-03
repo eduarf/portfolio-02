@@ -545,7 +545,9 @@ a:visited {
       gap: 2rem;
       align-items: flex-start;
       border-radius: 3px;
-      box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; }
+      overflow: hidden;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+      cursor: pointer; }
       .blog__cards--card__image {
         height: 30rem;
         width: 100%;
@@ -584,7 +586,8 @@ a:visited {
           .blog__cards--card__bottom--icon-container object {
             height: 3rem; }
           .blog__cards--card__bottom--icon-container span {
-            font-size: calc(.9rem + 0.5vw); }
+            font-size: calc(.9rem + 0.5vw);
+            font-weight: 200; }
 
 .contact {
   height: 600px;
