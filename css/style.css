@@ -450,7 +450,8 @@ a:visited {
       letter-spacing: 2px;
       position: relative;
       display: inline-block;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      text-transform: uppercase; }
       .portfolio__heading--h1::before {
         content: '';
         position: absolute;

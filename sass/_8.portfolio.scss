@@ -12,6 +12,7 @@
             position: relative;
             display: inline-block;
             margin-bottom: 1rem;
+            text-transform: uppercase;
             &::before {
                 content: '';
                 position: absolute;
