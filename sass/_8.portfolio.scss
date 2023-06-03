@@ -1,5 +1,70 @@
 .portfolio {
-    height: 600px;
-    background-color: royalblue;
-    grid-column: center-start / center-end;
+    grid-column: container-start / container-end;
+    @extend %sec-padding;
+    &__heading {
+        &--h1 {}
+        &--para {}
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 4rem;
+        &--card{
+            height: 40rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            &__image-div{
+                flex: 3;
+                overflow: hidden;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    background-position: center;
+                    transition: all .8s ease;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            &__content {
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 2rem;
+                div{
+                    h4{
+                        font-size: font-size(font-size-regular);
+                        font-weight: font-weight(font-weight-light);
+                        letter-spacing: 1px;
+                    }
+                    a{
+                        font-size: font-size(font-size-small);
+                    }
+                    span {
+                        font-size: font-size(font-size-small);
+                        font-weight: font-weight(font-weight-light);
+                        color: gray;
+                    }
+                }
+                button {
+                    height: 5rem;
+                    width: 5rem;
+                    background-color: transparent;
+                    display: grid;
+                    place-items: center;
+                    font-size: 3.5rem;
+                    border: 3px solid var(--color-primary);
+                    color: var(--color-primary);
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
 }
