@@ -1,5 +1,79 @@
 .blog {
-    height: 600px;
-    background-color: cadetblue;
-    grid-column: center-start / center-end;
+    grid-column: container-start / container-end;
+    @extend %sec-padding;
+    &__heading {
+        text-align: center;
+        &--h1 {
+            font-size: font-size(font-size-large);
+            text-transform: uppercase;
+        }
+        &--para {
+            font-size: font-size(font-size-small);
+            margin-bottom: 4rem;
+            font-weight: font-weight(font-weight-regular);
+            color: var(--color-gray);
+        }
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        gap: 2.5rem;
+        &--card {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: flex-start;
+            border-radius: 3px;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+            &__image {
+                height: 30rem;
+                width: 100%;
+                object-fit: cover;
+            }
+            &__topic {
+                font-size: font-size(font-size-regular);
+                margin: 0 1rem;
+            }
+            &__para {
+                font-size: font-size(font-size-small);
+                font-weight: font-weight(font-weight-thin);
+                margin: 0 1rem;
+            }
+            &__bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem;
+                width: 100%;
+                background-color: #f8f8f8;
+                border-top: 1px solid rgba(128, 128, 128, .2);
+                &--image-container{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .5rem;
+                    img {
+                        height: 5rem;
+                        width: 5rem;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    span{
+                        font-size: font-size(font-size-small);
+                    }
+                }
+                &--icon-container {
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    object {
+                        height: 3rem;
+                    }
+                    span{
+                        font-size: font-size(font-size-small);
+                    }
+                }
+            }
+        }
+    }
 }

@@ -524,9 +524,67 @@ a:visited {
   background-attachment: fixed; }
 
 .blog {
-  height: 600px;
-  background-color: cadetblue;
-  grid-column: center-start / center-end; }
+  grid-column: container-start / container-end; }
+  .blog__heading {
+    text-align: center; }
+    .blog__heading--h1 {
+      font-size: calc(1.5rem + 3vw);
+      text-transform: uppercase; }
+    .blog__heading--para {
+      font-size: calc(.9rem + 0.5vw);
+      margin-bottom: 4rem;
+      font-weight: 400;
+      color: var(--color-gray); }
+  .blog__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 2.5rem; }
+    .blog__cards--card {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+      border-radius: 3px;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; }
+      .blog__cards--card__image {
+        height: 30rem;
+        width: 100%;
+        object-fit: cover; }
+      .blog__cards--card__topic {
+        font-size: calc(1rem + .5vw);
+        margin: 0 1rem; }
+      .blog__cards--card__para {
+        font-size: calc(.9rem + 0.5vw);
+        font-weight: 200;
+        margin: 0 1rem; }
+      .blog__cards--card__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 100%;
+        background-color: #f8f8f8;
+        border-top: 1px solid rgba(128, 128, 128, 0.2); }
+        .blog__cards--card__bottom--image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: .5rem; }
+          .blog__cards--card__bottom--image-container img {
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            object-fit: cover; }
+          .blog__cards--card__bottom--image-container span {
+            font-size: calc(.9rem + 0.5vw); }
+        .blog__cards--card__bottom--icon-container {
+          display: flex;
+          align-items: center;
+          gap: .5rem; }
+          .blog__cards--card__bottom--icon-container object {
+            height: 3rem; }
+          .blog__cards--card__bottom--icon-container span {
+            font-size: calc(.9rem + 0.5vw); }
 
 .contact {
   height: 600px;
@@ -543,5 +601,5 @@ a:visited {
   background-repeat: no-repeat;
   background-position: center; }
 
-.about, .achievements, .portfolio {
+.about, .achievements, .portfolio, .blog {
   padding: 6vh 4vw; }
