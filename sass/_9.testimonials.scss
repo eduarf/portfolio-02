@@ -1,5 +1,11 @@
 .testimonials {
-    height: 600px;
-    background-color: antiquewhite;
-    grid-column: container-start / container-end;
+  height: 600px;
+  grid-column: container-start / container-end;
+  background-image: linear-gradient(
+      rgba(14, 127, 255, 0.8),
+      rgba(14, 127, 255, 0.8)
+    ),
+    url("../images/forest.jpeg");
+    @extend %bg;
+    background-attachment: fixed;
 }
