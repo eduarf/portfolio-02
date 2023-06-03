@@ -1,9 +1,33 @@
 .portfolio {
     grid-column: container-start / container-end;
     @extend %sec-padding;
+    display: grid;
+    gap: 4rem;
     &__heading {
-        &--h1 {}
-        &--para {}
+        text-align: center;
+        &--h1 {
+            font-size: font-size(font-size-large);
+            font-weight: font-weight(font-weight-bold);
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+            &::before {
+                content: '';
+                position: absolute;
+                height: 5px;
+                width: 50%;
+                background-color: var(--color-primary);
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+            }
+        }
+        &--para {
+            font-size: font-size(font-size-regular);
+            font-weight: font-weight(font-weight-light);
+            color: var(--color-gray);
+        }
     }
     &__cards {
         display: grid;
@@ -41,7 +65,7 @@
                 div{
                     h4{
                         font-size: font-size(font-size-regular);
-                        font-weight: font-weight(font-weight-light);
+                        font-weight: font-weight(font-weight-medium);
                         letter-spacing: 1px;
                     }
                     a{
@@ -63,6 +87,7 @@
                     border: 3px solid var(--color-primary);
                     color: var(--color-primary);
                     border-radius: 50%;
+                    cursor: pointer;
                 }
             }
         }
