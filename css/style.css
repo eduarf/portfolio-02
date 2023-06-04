@@ -727,6 +727,14 @@ a:visited {
     .contact__content__icon-container__svg-twitter {
       mask-image: url(../images/twitter.svg);
       -webkit-mask-image: url(../images/twitter.svg); }
+  @media screen and (max-width: 800px) {
+    .contact {
+      gap: 0;
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr)); } }
+  @media screen and (max-width: 600px) {
+    .contact {
+      padding: 6vh 4vw;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); } }
 
 .footer {
   height: 600px;

@@ -156,4 +156,13 @@
           @include svg-mask(twitter);
         }
       }
+      
+      @include media-tablet {
+        gap: 0;
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+      }
+      @include media-medium {
+        padding: 6vh 4vw;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      }
 }
