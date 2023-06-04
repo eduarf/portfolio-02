@@ -591,10 +591,142 @@ a:visited {
             font-weight: 200; }
 
 .contact {
-  height: 600px;
   grid-column: container-start / container-end;
   background-image: linear-gradient(rgba(14, 127, 255, 0.8), rgba(14, 127, 255, 0.8)), url("../images/cappadocia.jpeg");
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 2rem;
+  padding: 4rem 8rem; }
+  .contact__form-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+    margin: 4rem 0;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; }
+    .contact__form-container h1 {
+      margin-left: 4rem;
+      font-size: calc(1.5rem + 1.5vw);
+      font-weight: 400;
+      position: relative;
+      display: inline-block; }
+      .contact__form-container h1::before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 25%;
+        background-color: var(--color-primary);
+        bottom: 0; }
+    .contact__form-container__form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 0 4rem; }
+    .contact__form-container__input-container {
+      text-align: center; }
+      .contact__form-container__input-container input:not([type='submit']) {
+        width: 100%;
+        padding: 1rem; }
+        .contact__form-container__input-container input:not([type='submit'])::placeholder {
+          color: rgba(128, 128, 128, 0.7); }
+      .contact__form-container__input-container input[type='submit'] {
+        padding: 1.6rem 3rem;
+        border: none;
+        border-radius: 5rem;
+        color: var(--color-quinary);
+        font-size: calc(1rem + .5vw);
+        background-color: var(--color-primary);
+        cursor: pointer; }
+      .contact__form-container__input-container textarea {
+        resize: vertical;
+        min-height: 5rem;
+        width: 100%;
+        padding: 1rem;
+        font-size: 14px; }
+        .contact__form-container__input-container textarea::placeholder {
+          color: rgba(128, 128, 128, 0.6); }
+  .contact__content {
+    background-color: white;
+    margin: 4rem 0;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 3rem; }
+    .contact__content--h1 {
+      font-size: calc(1.5rem + 1.5vw);
+      font-weight: 400;
+      position: relative;
+      display: inline-block; }
+      .contact__content--h1::before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 25%;
+        background-color: var(--color-primary);
+        bottom: 0; }
+    .contact__content--para {
+      font-size: calc(1rem + .5vw);
+      font-weight: 200; }
+    .contact__content--address li {
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+      gap: 1rem; }
+      .contact__content--address li span {
+        font-size: 13px;
+        color: var(--color-gray);
+        font-weight: 200; }
+    .contact__content--address__svg {
+      height: 2rem;
+      width: 2rem;
+      background-color: var(--color-primary);
+      mask-size: cover;
+      -webkit-mask-size: cover; }
+    .contact__content--address__svg-location {
+      mask-image: url(../images/location.svg);
+      -webkit-mask-image: url(../images/location.svg); }
+    .contact__content--address__svg-telephone {
+      mask-image: url(../images/telephone.svg);
+      -webkit-mask-image: url(../images/telephone.svg); }
+    .contact__content--address__svg-email {
+      mask-image: url(../images/email.svg);
+      -webkit-mask-image: url(../images/email.svg); }
+    .contact__content__icon-container ul {
+      display: flex;
+      margin-bottom: 2rem;
+      gap: 2rem; }
+    .contact__content__icon-container li {
+      padding: 1rem;
+      border: 2px solid var(--color-primary);
+      border-radius: 50%;
+      transition: all .4s ease-in;
+      cursor: pointer; }
+      .contact__content__icon-container li:hover {
+        background-color: var(--color-primary); }
+    li:hover > .contact__content__icon-container__svg {
+      background-color: var(--color-quinary); }
+    .contact__content__icon-container__svg {
+      height: 2.5rem;
+      width: 2.5rem;
+      background-color: var(--color-primary);
+      mask-size: cover;
+      -webkit-mask-size: cover;
+      transition: all .2s ease-in; }
+    .contact__content__icon-container__svg-linkedin {
+      mask-image: url(../images/linkedin.svg);
+      -webkit-mask-image: url(../images/linkedin.svg); }
+    .contact__content__icon-container__svg-instagram {
+      mask-image: url(../images/instagram.svg);
+      -webkit-mask-image: url(../images/instagram.svg); }
+    .contact__content__icon-container__svg-facebook {
+      mask-image: url(../images/facebook.svg);
+      -webkit-mask-image: url(../images/facebook.svg); }
+    .contact__content__icon-container__svg-twitter {
+      mask-image: url(../images/twitter.svg);
+      -webkit-mask-image: url(../images/twitter.svg); }
 
 .footer {
   height: 600px;

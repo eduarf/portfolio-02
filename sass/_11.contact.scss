@@ -1,5 +1,4 @@
 .contact {
-    height: 600px;
     grid-column: container-start / container-end;
     background-image: linear-gradient(
         rgba(14, 127, 255, 0.8),
@@ -8,4 +7,153 @@
       url("../images/cappadocia.jpeg");
       @extend %bg;
       background-attachment: fixed;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+      gap: 2rem;
+      padding: 4rem 8rem;
+      &__form-container {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0;
+        margin: 4rem 0;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        h1 {
+          margin-left: 4rem;
+          font-size: calc(1.5rem + 1.5vw);
+          font-weight: font-weight(font-weight-regular);
+          position: relative;
+          display: inline-block;
+          &::before {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 25%;
+            background-color: var(--color-primary);
+            bottom: 0;
+          }
+        }
+        &__form {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          padding: 0 4rem;
+        }
+        &__input-container{
+          text-align: center;
+          input:not([type='submit']){
+            width: 100%;
+            padding: 1rem;
+            &::placeholder {
+              color: rgba(128,128,128,.7);
+            }
+          }
+          input[type='submit']{
+            padding: 1.6rem 3rem;
+            border: none;
+            border-radius: 5rem;
+            color: var(--color-quinary);
+            font-size: font-size(font-size-regular);
+            background-color: var(--color-primary);
+            cursor: pointer;
+          }
+          textarea {
+            resize: vertical;
+            min-height: 5rem;
+            width: 100%;
+            padding: 1rem;
+            font-size: 14px;
+            &::placeholder {
+              color: rgba(128, 128, 128, .6);
+            }
+          }
+        }
+      }
+
+      &__content {
+        background-color: white;
+        margin: 4rem 0;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem 3rem;
+        &--h1 {
+          font-size: calc(1.5rem + 1.5vw);
+          font-weight: font-weight(font-weight-regular);
+          position: relative;
+          display: inline-block;
+          &::before {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 25%;
+            background-color: var(--color-primary);
+            bottom: 0;
+          }
+        }
+        &--para {
+          font-size: font-size(font-size-regular);
+          font-weight: font-weight(font-weight-thin);
+        }
+        &--address{
+          li {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            gap: 1rem;
+            span {
+              font-size: 13px;
+              color: var(--color-gray);
+              font-weight: font-weight(font-weight-thin);
+            }
+          }
+          &__svg{
+            height: 2rem;
+            width: 2rem;
+            background-color: var(--color-primary);
+            mask-size: cover;
+            -webkit-mask-size: cover;
+          }
+          // svg locaiton 
+          // svg telephone
+          // svg letter
+          @include svg-mask(location);
+          @include svg-mask(telephone);
+          @include svg-mask(email);
+        }
+        &__icon-container {
+          ul {
+            display: flex;
+            margin-bottom: 2rem;
+            gap: 2rem;
+          }
+          li {
+            padding: 1rem;
+            border: 2px solid var(--color-primary);
+            border-radius: 50%;
+            transition: all .4s ease-in;
+            cursor: pointer;
+            &:hover {
+              background-color: var(--color-primary);
+            }
+          }
+          li:hover > &__svg {
+            background-color: var(--color-quinary);
+          }
+          &__svg {
+            height: 2.5rem;
+            width: 2.5rem;
+            background-color: var(--color-primary);
+            mask-size: cover;
+            -webkit-mask-size: cover;
+            transition: all .2s ease-in;
+          }
+          @include svg-mask(linkedin);
+          @include svg-mask(instagram);
+          @include svg-mask(facebook);
+          @include svg-mask(twitter);
+        }
+      }
 }
