@@ -1,5 +1,4 @@
 .testimonials {
-  height: 600px;
   grid-column: container-start / container-end;
   background-image: linear-gradient(
       rgba(14, 127, 255, 0.8),
@@ -7,5 +6,64 @@
     ),
     url("../images/forest.jpeg");
     @extend %bg;
+    @extend %sec-padding;
     background-attachment: fixed;
+    text-align: center;
+    color: var(--color-quinary);
+  .slider{
+      border: 1px solid transparent;
+      max-width: 60rem;
+      margin: 0 auto;
+      text-align: center;
+      padding: 2rem;
+  }
+  .slide{
+      display: none;
+      padding: 1rem;
+  }
+  .slide.active {
+      display: block;
+      animation: slide-active 1s linear;
+  }
+  .slide-heading {
+      font-size: 1.1rem;
+      margin-top: .5rem;
+  }
+  .paragraph{
+      font-size: font-size(font-size-regular);
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+      font-weight: font-weight(font-weight-light);
+  }
+  .indicator{
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      display: flex;
+      justify-content: center;
+  }
+  .img{
+      height: calc(6rem + 5vw);
+      width: calc(6rem + 5vw);
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 3vh 3vw;
+      opacity: 0.3;
+      border: 0.3rem solid white;
+      transition: opacity 1s ease;
+      cursor: pointer;
+  }
+  .img.active {
+      opacity: 1;
+  }
+  
+  @keyframes slide-active {
+      0% {
+          transform: translateX(-1rem);
+          opacity: 0;
+      }
+      100% {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
 }
