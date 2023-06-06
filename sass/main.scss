@@ -39,6 +39,35 @@
       -webkit-mask-image: url(../images/#{$svg-class}.svg);
     }
   }
+  .scroll-container {
+    position: fixed;
+    bottom: 45rem;
+    right: 4rem;
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    .scroll {
+        height: 4rem;
+        width: 4rem;
+        mask-image: url(../images/arrow.svg);
+        -webkit-mask-image: url(../images/arrow.svg);
+        mask-size: cover;
+        -webkit-mask-size: cover;
+        background-color: var(--color-quinary);
+    }
+  }
+.scroll-container.active {
+    visibility: visible;
+    opacity: 1;
+    bottom: 4rem;
+}
 
 
 @import "1.reset.scss";
